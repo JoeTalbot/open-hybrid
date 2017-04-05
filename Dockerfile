@@ -1,8 +1,8 @@
-FROM readytalk/nodejs
+FROM node:alpine
 
   WORKDIR /app/openhybrid
   ADD https://codeload.github.com/openhybrid/object/zip/v1.6.0 /app/openhybrid/v1.6.0.zip
-  RUN apt-get install unzip && unzip -u /app/openhybrid/v1.6.0.zip -d /app/openhybrid
+  RUN apk update && apk add unzip && unzip -u /app/openhybrid/v1.6.0.zip -d /app/openhybrid
   RUN cd /app/openhybrid/object-1.6.0 && npm install
 
   CMD ["npm", "start"]
