@@ -8,4 +8,4 @@ RUN cd /app/openhybrid/object-1.6.0 && npm install --no-optional
 
 EXPOSE 8080
 CMD ["npm", "start"]
-  ENTRYPOINT ["/nodejs/bin/node", "/app/openhybrid/object-1.6.0/server.js"]
+ENTRYPOINT ["/nodejs/bin/node", "/app/openhybrid/object-1.6.0/server.js"]
